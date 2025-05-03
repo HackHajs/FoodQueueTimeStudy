@@ -35,7 +35,7 @@ class FoodQueueServer(BaseHTTPRequestHandler):
         time = (npeople * 30) / 60
 
         if self.path == "/":
-            message = str(npeople) + " people, " + str(time) + " minutes"
+            message = "I spy with my little eye " + str(npeople) + " people.<br>According to my studies that'll be " + str(time) + " minutes"
 
             self.send_response(200)
             self.send_header("Content-type", "text/html")
